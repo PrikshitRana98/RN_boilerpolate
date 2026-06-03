@@ -32,6 +32,7 @@ This project uses:
 | Layer | Technology |
 |-------|------------|
 | URL scheme | `deeplink://` |
+| Universal / App Links | `https://mypractice.ai/...` — see [UNIVERSAL_LINKS.md](./UNIVERSAL_LINKS.md) |
 | JS routing | React Navigation `linking` config |
 | Auth handling | Redux `isFirstTime` + custom `getStateFromPath` |
 | Share | React Native `Share` API |
@@ -635,7 +636,7 @@ User is logged in. Auth guard redirects Auth links to Home. Clear app data or lo
 | Domain verification | Not required | Required |
 | Best for | Dev, in-app share, push | Marketing, email, web |
 
-This project uses **custom scheme deep links**. For production web/email campaigns, consider adding Universal Links (iOS) and App Links (Android) with an HTTPS domain.
+**Universal Links are implemented.** See [UNIVERSAL_LINKS.md](./UNIVERSAL_LINKS.md) for domain hosting and verification. Share and `buildDeepLinkUrl()` default to `https://mypractice.ai/...` URLs.
 
 ---
 

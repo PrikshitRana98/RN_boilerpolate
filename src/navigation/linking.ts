@@ -1,7 +1,12 @@
 import { LinkingOptions } from '@react-navigation/native';
+import {
+  CUSTOM_SCHEME_PREFIX,
+  LINKING_PREFIXES,
+  UNIVERSAL_LINK_ORIGIN,
+} from '@/config/deepLink';
 import { RootStackParamList } from './types';
 
-export const DEEP_LINK_PREFIX = 'deeplink://';
+export const DEEP_LINK_PREFIX = CUSTOM_SCHEME_PREFIX;
 
 export const DeepLinkPaths = {
   HOME: 'home',
@@ -13,19 +18,33 @@ export const DeepLinkPaths = {
 
 export type DeepLinkPath = (typeof DeepLinkPaths)[keyof typeof DeepLinkPaths];
 
+type BuildDeepLinkOptions = {
+  /** When true (default), returns https:// URL for Universal/App Links */
+  preferUniversalLink?: boolean;
+};
+
 export function buildDeepLinkUrl(
   path: DeepLinkPath | string,
   params?: { phoneNumber?: string },
+  options?: BuildDeepLinkOptions,
 ): string {
-  if (path === 'otp' && params?.phoneNumber) {
-    return `${DEEP_LINK_PREFIX}otp/${encodeURIComponent(params.phoneNumber)}`;
+  const preferUniversalLink = options?.preferUniversalLink ?? true;
+  const cleanPath = path.replace(/^\//, '');
+
+  if (cleanPath === 'otp' && params?.phoneNumber) {
+    const segment = `otp/${encodeURIComponent(params.phoneNumber)}`;
+    return preferUniversalLink
+      ? `${UNIVERSAL_LINK_ORIGIN}/${segment}`
+      : `${DEEP_LINK_PREFIX}${segment}`;
   }
 
-  return `${DEEP_LINK_PREFIX}${path.replace(/^\//, '')}`;
+  return preferUniversalLink
+    ? `${UNIVERSAL_LINK_ORIGIN}/${cleanPath}`
+    : `${DEEP_LINK_PREFIX}${cleanPath}`;
 }
 
 export const linking: LinkingOptions<RootStackParamList> = {
-  prefixes: [DEEP_LINK_PREFIX],
+  prefixes: [...LINKING_PREFIXES],
   config: {
     screens: {
       Main: {

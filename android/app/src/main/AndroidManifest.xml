@@ -29,7 +29,21 @@
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
         <data android:scheme="deeplink" />
-      </intent-filter>  
+      </intent-filter>
+
+      <!-- Android App Links (Universal Links) — requires assetlinks.json on your domain -->
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="https" android:host="mypractice.ai" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="https" android:host="www.mypractice.ai" />
+      </intent-filter>
     </activity>
   </application>
 </manifest>
