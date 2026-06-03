@@ -4,6 +4,8 @@ import TextComp from '@/components/TextComp';
 import TextInputComp from '@/components/TextInputComp';
 import WrapperContainer from '@/components/WrapperContainer';
 import { AuthStackParamList } from '@/navigation/types';
+import { DeepLinkPaths } from '@/navigation/linking';
+import { shareDeepLink } from '@/utils/shareDeepLink';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import React, { useState } from 'react';
@@ -46,7 +48,9 @@ const Signup = () => {
         console.log('Form submitted:', formData);
     };
 
-
+    const handleShareSignup = () => {
+        shareDeepLink(DeepLinkPaths.SIGNUP);
+    };
 
     return (
         <WrapperContainer>
@@ -131,6 +135,12 @@ const Signup = () => {
                             title="NEXT"
                             onPress={handleSubmit}
                             style={styles.submitButton}
+                        />
+                        <ButtonComp
+                            title="SHARE_SIGNUP_LINK"
+                            onPress={handleShareSignup}
+                            variant="secondary"
+                            style={styles.shareButton}
                         />
                     </View>
                 </ScrollView>

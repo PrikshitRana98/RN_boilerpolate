@@ -209,6 +209,8 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 ```
 
+**Deep linking:** Custom URL scheme (`deeplink://`) with auth guards, share, and FCM support. See [docs/DEEP_LINKING.md](docs/DEEP_LINKING.md) for the full step-by-step guide with code.
+
 ### Redux Integration
 
 ```typescript

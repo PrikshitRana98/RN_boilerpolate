@@ -1,4 +1,4 @@
-package boilerplate.expo
+package com.mypractice.ai
 
 import android.os.Bundle
 

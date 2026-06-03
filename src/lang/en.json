@@ -40,5 +40,8 @@
     "LIGHT": "Light",
     "DARK": "Dark",
     "LOGOUT": "Logout",
-    "PROFILE": "Profile"
+    "PROFILE": "Profile",
+    "SHARE": "Share",
+    "SHARE_APP": "Share App",
+    "SHARE_SIGNUP_LINK": "Share Signup Link"
 }

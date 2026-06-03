@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "534630157191",
-    "project_id": "expo-boilerplate-d65a5",
-    "storage_bucket": "expo-boilerplate-d65a5.firebasestorage.app"
+    "project_id": "mypractice-ai-12345",
+    "storage_bucket": "mypractice-ai-12345.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:534630157191:android:a6a2248dd35bc188d1e122",
         "android_client_info": {
-          "package_name": "boilerplate.expo"
+          "package_name": "com.mypractice.ai"
         }
       },
       "oauth_client": [],

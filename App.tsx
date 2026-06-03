@@ -15,14 +15,14 @@
 import "@/lang";
 import Routes from '@/navigation/Routes';
 import store from "@/redux/store";
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { I18nManager } from "react-native";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from "react-redux";
 import { ThemeProvider } from '@/context/ThemeContext';
 import { getLocalItem } from "@/utils/checkStorage";
 import BootSplash from "react-native-bootsplash";
-import { requestUserPermission } from "@/helper/notifciationService";
+import { requestUserPermission, setupNotificationDeepLinks } from "@/helper/notifciationService";
 
 /**
  * Main application component that serves as the entry point for the app.
@@ -30,6 +30,7 @@ import { requestUserPermission } from "@/helper/notifciationService";
  * @returns {JSX.Element | null} The rendered app or null during font loading
  */
 const App = () => {
+  const [isAppReady, setIsAppReady] = useState(false);
 
   /**
    * Setup effect hook that runs on component mount and when font loading status changes
@@ -49,6 +50,7 @@ const App = () => {
     const init = async () => {
       await getLocalItem();
       await requestUserPermission();
+      setIsAppReady(true);
     };
 
     init().finally(async () => {
@@ -58,6 +60,14 @@ const App = () => {
     });
 
   }, []);
+
+  useLayoutEffect(() => {
+    if (!isAppReady) {
+      return;
+    }
+
+    return setupNotificationDeepLinks();
+  }, [isAppReady]);
 
 
   /**
@@ -71,7 +81,7 @@ const App = () => {
     <SafeAreaProvider>
       <Provider store={store}>
         <ThemeProvider>
-          <Routes />
+          <Routes isAppReady={isAppReady} />
         </ThemeProvider>
       </Provider>
     </SafeAreaProvider>

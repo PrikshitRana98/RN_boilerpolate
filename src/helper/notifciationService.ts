@@ -1,7 +1,36 @@
 import { secureStorage } from '@/utils/secureStorage';
-import { AuthorizationStatus, getMessaging, getToken, requestPermission } from '@react-native-firebase/messaging';
+import {
+  AuthorizationStatus,
+  FirebaseMessagingTypes,
+  getMessaging,
+  getToken,
+  requestPermission,
+} from '@react-native-firebase/messaging';
+import { Linking } from 'react-native';
 
 const messagingInstance = getMessaging();
+
+const openDeepLinkFromNotification = (
+  remoteMessage: FirebaseMessagingTypes.RemoteMessage | null,
+) => {
+  const url = remoteMessage?.data?.deeplink;
+
+  if (typeof url === 'string' && url.length > 0) {
+    Linking.openURL(url);
+  }
+};
+
+export function setupNotificationDeepLinks() {
+  getMessaging()
+    .getInitialNotification()
+    .then(openDeepLinkFromNotification);
+
+  const unsubscribe = getMessaging().onNotificationOpenedApp(
+    openDeepLinkFromNotification,
+  );
+
+  return unsubscribe;
+}
 
 export async function requestUserPermission() {
   const authStatus = await requestPermission(messagingInstance);

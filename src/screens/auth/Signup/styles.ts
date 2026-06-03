@@ -64,6 +64,9 @@ const useRTLStyles = (isRTL: boolean, theme?: ThemeType) => {
         submitButton: {
             marginTop: moderateScale(10),
         },
+        shareButton: {
+            marginTop: moderateScale(4),
+        },
         header:{
             marginBottom: verticalScale(16)
         }
