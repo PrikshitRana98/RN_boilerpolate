@@ -51,5 +51,14 @@
     "TIMER_RESET": "إعادة ضبط",
     "TIMER_RUNNING": "قيد التشغيل",
     "TIMER_STOPPED": "متوقف",
-    "TIMER_BACKGROUND_HINT": "يستمر المؤقت في العمل أثناء وجود التطبيق في الخلفية."
+    "TIMER_BACKGROUND_HINT": "يستمر المؤقت في العمل أثناء وجود التطبيق في الخلفية.",
+    "OFFLINE_STORAGE": "التخزين دون اتصال",
+    "OFFLINE_STORAGE_DESCRIPTION": "احفظ النص محليًا على جهازك. تبقى البيانات حتى بعد إغلاق التطبيق.",
+    "OFFLINE_STORAGE_INPUT_LABEL": "أدخل النص للحفظ",
+    "OFFLINE_STORAGE_SAVED_LABEL": "البيانات المحفوظة",
+    "OFFLINE_STORAGE_SAVE": "حفظ",
+    "OFFLINE_STORAGE_CLEAR": "مسح",
+    "INTERNET_CONNECTED": "متصل بالإنترنت",
+    "INTERNET_DISCONNECTED": "لا يوجد اتصال بالإنترنت",
+    "INTERNET_CHECKING": "جارٍ التحقق من الاتصال..."
 }

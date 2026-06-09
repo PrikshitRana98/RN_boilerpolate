@@ -1,7 +1,8 @@
 import {
   Login,
+  OfflineStorage,
   Signup,
-  OTPVerification
+  OTPVerification,
 } from '@/screens';
 import React from 'react';
 import { AuthStackParamList } from './types';
@@ -13,6 +14,7 @@ const AuthStack = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} id={undefined}>
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="OfflineStorage" component={OfflineStorage} />
       <Stack.Screen name="Signup" component={Signup} />
       <Stack.Screen name="OTPVerification" component={OTPVerification} />
     </Stack.Navigator>

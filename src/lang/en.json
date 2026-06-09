@@ -51,5 +51,14 @@
     "TIMER_RESET": "Reset",
     "TIMER_RUNNING": "Running",
     "TIMER_STOPPED": "Stopped",
-    "TIMER_BACKGROUND_HINT": "The timer keeps running while the app is in the background."
+    "TIMER_BACKGROUND_HINT": "The timer keeps running while the app is in the background.",
+    "OFFLINE_STORAGE": "Offline Storage",
+    "OFFLINE_STORAGE_DESCRIPTION": "Save text locally on your device. Data persists even when you close the app.",
+    "OFFLINE_STORAGE_INPUT_LABEL": "Enter text to save",
+    "OFFLINE_STORAGE_SAVED_LABEL": "Saved data",
+    "OFFLINE_STORAGE_SAVE": "Save",
+    "OFFLINE_STORAGE_CLEAR": "Clear",
+    "INTERNET_CONNECTED": "Internet connected",
+    "INTERNET_DISCONNECTED": "No internet connection",
+    "INTERNET_CHECKING": "Checking connection..."
 }

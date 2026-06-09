@@ -83,10 +83,14 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
         },
         buttonSection: {
             marginBottom: moderateScale(24),
+            gap: moderateScale(12),
         },
         nextButton: {
             height: moderateScale(48),
             backgroundColor: commonColors.primary,
+        },
+        offlineButton: {
+            height: moderateScale(48),
         },
         termsText: {
             fontSize: moderateScale(12),

@@ -1,7 +1,7 @@
 //import liraries
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import React, { useActionState, useState } from 'react';
+import React, { useState } from 'react';
 import { View } from 'react-native';
 
 import ButtonComp from '@/components/ButtonComp';
@@ -45,6 +45,10 @@ const Login = () => {
 
     const handleSignUp = () => {
         navigation.navigate('Signup');
+    };
+
+    const handleOfflineStorage = () => {
+        navigation.navigate('OfflineStorage');
     };
 
     return (
@@ -115,7 +119,12 @@ const Login = () => {
                             onPress={handleNext}
                             style={styles.nextButton}
                         />
-                     
+                        <ButtonComp
+                            title="OFFLINE_STORAGE"
+                            onPress={handleOfflineStorage}
+                            variant="secondary"
+                            style={styles.offlineButton}
+                        />
                     </View>
                 </View>
 
