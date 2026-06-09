@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "534630157191",
-    "project_id": "mypractice-ai-12345",
-    "storage_bucket": "mypractice-ai-12345.firebasestorage.app"
+    "project_number": "537393851498",
+    "project_id": "mypractice-95db5",
+    "storage_bucket": "mypractice-95db5.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:534630157191:android:a6a2248dd35bc188d1e122",
+        "mobilesdk_app_id": "1:537393851498:android:8c37b454993e472208ee13",
         "android_client_info": {
           "package_name": "com.mypractice.ai"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAwnKcweQTUmsSAYQ5Nm79qSLr1HMmltqA"
+          "current_key": "AIzaSyARSBNM2x9Gc5iaBp0UwE3oKW0wi7uSBno"
         }
       ],
       "services": {
@@ -27,3 +27,5 @@
   ],
   "configuration_version": "1"
 }
+
+

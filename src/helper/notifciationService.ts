@@ -57,6 +57,7 @@ const getFCMToken = async () => {
     if(!!token){
       await secureStorage.setItem('FCM_TOKEN', token);
     } 
+    console.log('new token generated fcmToken>>>>', token);
     return token;
   } catch (error) {
     console.log("error during generating token", error);

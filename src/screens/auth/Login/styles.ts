@@ -44,6 +44,35 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
             letterSpacing: 0.5,
 
         },
+        timerSection: {
+            marginBottom: moderateScale(24),
+            padding: moderateScale(16),
+            borderRadius: moderateScale(12),
+            backgroundColor: colors.surface,
+            borderWidth: 1,
+            borderColor: colors.inputBorder,
+            alignItems: 'center',
+        },
+        timerDisplay: {
+            fontSize: moderateScale(32),
+            fontFamily: fontFamily.bold,
+            color: colors.text,
+            letterSpacing: moderateScale(1),
+        },
+        timerStatus: {
+            fontSize: moderateScale(12),
+            fontFamily: fontFamily.medium,
+            color: colors.textSecondary,
+            marginTop: moderateScale(8),
+            marginBottom: moderateScale(16),
+        },
+        timerButtons: {
+            width: '100%',
+            gap: moderateScale(10),
+        },
+        timerButton: {
+            height: moderateScale(44),
+        },
         formSection: {
             marginBottom: moderateScale(24),
         },

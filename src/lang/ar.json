@@ -1,5 +1,6 @@
 {
     "Home": "الرئيسية",
+    "Timer": "المؤقت",
     "Profile": "الحساب",
     "Settings": "الإعدادات",
     "SUBMIT": "إرسال",
@@ -43,5 +44,12 @@
     "PROFILE": "الحساب",
     "SHARE": "مشاركة",
     "SHARE_APP": "مشاركة التطبيق",
-    "SHARE_SIGNUP_LINK": "مشاركة رابط التسجيل"
+    "SHARE_SIGNUP_LINK": "مشاركة رابط التسجيل",
+    "TIMER": "المؤقت",
+    "TIMER_START": "ابدأ",
+    "TIMER_STOP": "إيقاف",
+    "TIMER_RESET": "إعادة ضبط",
+    "TIMER_RUNNING": "قيد التشغيل",
+    "TIMER_STOPPED": "متوقف",
+    "TIMER_BACKGROUND_HINT": "يستمر المؤقت في العمل أثناء وجود التطبيق في الخلفية."
 }

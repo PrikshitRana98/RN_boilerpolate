@@ -20,7 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let delegate = ReactNativeDelegate()
     let factory = RCTReactNativeFactory(delegate: delegate)
     delegate.dependencyProvider = RCTAppDependencyProvider()
- 
+    
+    let googleMapKey = Bundle.main.object(forInfoDictionaryKey: "GOOGLE_MAP_KEY") as?String
+    let otherKey = Bundle.main.object(forInfoDictionaryKey: "OTHER_KEY") as?String
+    
+    print("google map key >>>>> \(googleMapKey ?? "Not Found")")
+    print("other map key >>>>> \(otherKey ?? "Not Found")")
+    
     reactNativeDelegate = delegate
     reactNativeFactory = factory
  

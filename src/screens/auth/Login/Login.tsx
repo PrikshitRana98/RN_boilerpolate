@@ -13,7 +13,17 @@ import useIsRTL from '@/hooks/useIsRTL';
 import { AuthStackParamList } from '@/navigation/types';
 
 import { useTheme } from '@/context/ThemeContext';
+import { useTimer } from '@/context/TimerContext';
 import useRTLStyles from './styles';
+
+const formatTime = (seconds: number): string => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    const pad = (num: number) => String(num).padStart(2, '0');
+
+    return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;
+};
 
 const Login = () => {
     const isRTL = useIsRTL();
@@ -22,6 +32,7 @@ const Login = () => {
     const styles = useRTLStyles(isRTL, theme);
     const [email, setEmail] = useState('');
     const navigation = useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
+    const { elapsed, isRunning, toggleTimer, resetTimer } = useTimer();
 
 
 
@@ -56,6 +67,28 @@ const Login = () => {
                                 text='SIGN_UP'
                                 style={styles.signUpLink}
                                 onPress={handleSignUp}
+                            />
+                        </View>
+                    </View>
+
+                    {/* Timer Section */}
+                    <View style={styles.timerSection}>
+                        <TextComp isDynamic text={formatTime(elapsed)} style={styles.timerDisplay} />
+                        <TextComp
+                            text={isRunning ? 'TIMER_RUNNING' : 'TIMER_STOPPED'}
+                            style={styles.timerStatus}
+                        />
+                        <View style={styles.timerButtons}>
+                            <ButtonComp
+                                title={isRunning ? 'TIMER_STOP' : 'TIMER_START'}
+                                onPress={toggleTimer}
+                                style={styles.timerButton}
+                            />
+                            <ButtonComp
+                                title="TIMER_RESET"
+                                onPress={resetTimer}
+                                variant="secondary"
+                                style={styles.timerButton}
                             />
                         </View>
                     </View>

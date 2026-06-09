@@ -33,6 +33,14 @@
 			</array>
 		</dict>
 	</array>
+  
+  <key>GOOGLE_MAP_KEY</key>
+  <string>$(GOOGLE_MAP_KEY)</string>
+  
+  <key>OTHER_KEY</key>
+  <string>$(OTHER_KEY)</string>
+  
+  
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>

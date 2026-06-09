@@ -10,6 +10,7 @@
 		0BD465330F0546D5A47B8E84 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A391643C2A6D4743858B382E /* Inter-SemiBold.ttf */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2170D844556931C91A6B16F4 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		43B2ECAE2FD15885004AA655 /* secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 43B2ECAD2FD15885004AA655 /* secret.xcconfig */; };
 		683D065CFFD84B318BF86D6F /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0C2EC2322544755BF66EE8E /* Inter-Regular.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -29,6 +30,7 @@
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = rn_boilerplate/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		18ADB1424142131DFBBA968E /* Pods_rn_boilerplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rn_boilerplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		398693F3598F48B9AC1DD61E /* Inter-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-Bold.ttf"; path = "../src/assets/fonts/Inter-Bold.ttf"; sourceTree = "<group>"; };
+		43B2ECAD2FD15885004AA655 /* secret.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = secret.xcconfig; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = rn_boilerplate/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = rn_boilerplate/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F630D5967DCB01007818C73 /* Pods-rn_boilerplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_boilerplate.debug.xcconfig"; path = "Target Support Files/Pods-rn_boilerplate/Pods-rn_boilerplate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				045996C6D6F34972831B7473 /* BootSplash.storyboard */,
 				F95EFB5CCF1343A48C41075F /* Colors.xcassets */,
+				43B2ECAD2FD15885004AA655 /* secret.xcconfig */,
 			);
 			name = rn_boilerplate;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				43B2ECAE2FD15885004AA655 /* secret.xcconfig in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				2170D844556931C91A6B16F4 /* PrivacyInfo.xcprivacy in Resources */,
 				E6D65C171C3C4C24B4E20B2B /* Inter-Bold.ttf in Resources */,
@@ -379,6 +383,7 @@
 		};
 		83CBBA201A601CBA00E9B192 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B2ECAD2FD15885004AA655 /* secret.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -472,6 +477,7 @@
 		};
 		83CBBA211A601CBA00E9B192 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43B2ECAD2FD15885004AA655 /* secret.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;

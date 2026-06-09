@@ -20,6 +20,7 @@ import { I18nManager } from "react-native";
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Provider } from "react-redux";
 import { ThemeProvider } from '@/context/ThemeContext';
+import { TimerProvider } from '@/context/TimerContext';
 import { getLocalItem } from "@/utils/checkStorage";
 import BootSplash from "react-native-bootsplash";
 import { requestUserPermission, setupNotificationDeepLinks } from "@/helper/notifciationService";
@@ -81,7 +82,9 @@ const App = () => {
     <SafeAreaProvider>
       <Provider store={store}>
         <ThemeProvider>
-          <Routes isAppReady={isAppReady} />
+          <TimerProvider>
+            <Routes isAppReady={isAppReady} />
+          </TimerProvider>
         </ThemeProvider>
       </Provider>
     </SafeAreaProvider>

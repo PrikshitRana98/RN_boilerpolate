@@ -1,5 +1,6 @@
 {
     "Home": "Home",
+    "Timer": "Timer",
     "Profile": "Profile",
     "Settings": "Settings",
     "SUBMIT": "Submit",
@@ -43,5 +44,12 @@
     "PROFILE": "Profile",
     "SHARE": "Share",
     "SHARE_APP": "Share App",
-    "SHARE_SIGNUP_LINK": "Share Signup Link"
+    "SHARE_SIGNUP_LINK": "Share Signup Link",
+    "TIMER": "Timer",
+    "TIMER_START": "Start",
+    "TIMER_STOP": "Stop",
+    "TIMER_RESET": "Reset",
+    "TIMER_RUNNING": "Running",
+    "TIMER_STOPPED": "Stopped",
+    "TIMER_BACKGROUND_HINT": "The timer keeps running while the app is in the background."
 }
