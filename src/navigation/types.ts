@@ -8,6 +8,7 @@ export type AuthStackParamList = {
   Signup: undefined;
   Onboarding: undefined;
   OfflineStorage: undefined;
+  OfflinePost: undefined;
   OTPVerification: {
     phoneNumber: string;
   };

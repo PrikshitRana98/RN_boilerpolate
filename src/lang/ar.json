@@ -60,5 +60,17 @@
     "OFFLINE_STORAGE_CLEAR": "مسح",
     "INTERNET_CONNECTED": "متصل بالإنترنت",
     "INTERNET_DISCONNECTED": "لا يوجد اتصال بالإنترنت",
-    "INTERNET_CHECKING": "جارٍ التحقق من الاتصال..."
+    "INTERNET_CHECKING": "جارٍ التحقق من الاتصال...",
+    "OFFLINE_POST": "نشر دون اتصال",
+    "OFFLINE_POST_DESCRIPTION": "أرسل البيانات مثل طلب POST. إذا كان الاتصال غير متوفر، يتم الحفظ محليًا وإرساله تلقائيًا عند عودة الإنترنت.",
+    "OFFLINE_POST_TITLE_LABEL": "العنوان",
+    "OFFLINE_POST_TITLE_PLACEHOLDER": "أدخل العنوان",
+    "OFFLINE_POST_MESSAGE_LABEL": "الرسالة",
+    "OFFLINE_POST_SUBMIT": "إرسال",
+    "OFFLINE_POST_PENDING_LABEL": "الطلبات المعلقة",
+    "OFFLINE_POST_LAST_STATUS": "آخر حالة",
+    "OFFLINE_POST_SUBMITTING": "جارٍ الإرسال...",
+    "OFFLINE_POST_SENT": "تم إرسال البيانات بنجاح",
+    "OFFLINE_POST_QUEUED": "تم الحفظ دون اتصال. سيتم المزامنة عند الاتصال",
+    "OFFLINE_POST_FAILED": "فشل الإرسال. حاول مرة أخرى"
 }

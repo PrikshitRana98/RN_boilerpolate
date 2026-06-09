@@ -1,6 +1,7 @@
 //auth screens
 export { default as Login } from './auth/Login/Login';
 export { default as OfflineStorage } from './auth/OfflineStorage/OfflineStorage';
+export { default as OfflinePost } from './auth/OfflinePost/OfflinePost';
 export { default as Signup } from './auth/Signup/Signup';
 export { default as OTPVerification } from './auth/OTPVerification/OTPVerification';
 

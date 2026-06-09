@@ -24,6 +24,7 @@ import { TimerProvider } from '@/context/TimerContext';
 import { getLocalItem } from "@/utils/checkStorage";
 import BootSplash from "react-native-bootsplash";
 import { requestUserPermission, setupNotificationDeepLinks } from "@/helper/notifciationService";
+import { startOfflineSyncListener } from "@/helper/offlineSyncService";
 
 /**
  * Main application component that serves as the entry point for the app.
@@ -69,6 +70,10 @@ const App = () => {
 
     return setupNotificationDeepLinks();
   }, [isAppReady]);
+
+  useLayoutEffect(() => {
+    return startOfflineSyncListener();
+  }, []);
 
 
   /**

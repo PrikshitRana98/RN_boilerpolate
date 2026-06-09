@@ -51,6 +51,10 @@ const Login = () => {
         navigation.navigate('OfflineStorage');
     };
 
+    const handleOfflinePost = () => {
+        navigation.navigate('OfflinePost');
+    };
+
     return (
         <WrapperContainer style={styles.container}>
             <HeaderComp showBack={false} customStyle={styles.header} />
@@ -122,6 +126,12 @@ const Login = () => {
                         <ButtonComp
                             title="OFFLINE_STORAGE"
                             onPress={handleOfflineStorage}
+                            variant="secondary"
+                            style={styles.offlineButton}
+                        />
+                        <ButtonComp
+                            title="OFFLINE_POST"
+                            onPress={handleOfflinePost}
                             variant="secondary"
                             style={styles.offlineButton}
                         />

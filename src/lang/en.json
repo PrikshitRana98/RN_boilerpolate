@@ -60,5 +60,17 @@
     "OFFLINE_STORAGE_CLEAR": "Clear",
     "INTERNET_CONNECTED": "Internet connected",
     "INTERNET_DISCONNECTED": "No internet connection",
-    "INTERNET_CHECKING": "Checking connection..."
+    "INTERNET_CHECKING": "Checking connection...",
+    "OFFLINE_POST": "Offline Post",
+    "OFFLINE_POST_DESCRIPTION": "Submit data like a POST API. If offline, data is saved locally and sent automatically when internet returns.",
+    "OFFLINE_POST_TITLE_LABEL": "Title",
+    "OFFLINE_POST_TITLE_PLACEHOLDER": "Enter title",
+    "OFFLINE_POST_MESSAGE_LABEL": "Message",
+    "OFFLINE_POST_SUBMIT": "Submit",
+    "OFFLINE_POST_PENDING_LABEL": "Pending requests",
+    "OFFLINE_POST_LAST_STATUS": "Last status",
+    "OFFLINE_POST_SUBMITTING": "Submitting...",
+    "OFFLINE_POST_SENT": "Data sent successfully",
+    "OFFLINE_POST_QUEUED": "Saved offline. Will sync when online",
+    "OFFLINE_POST_FAILED": "Failed to submit. Try again"
 }
