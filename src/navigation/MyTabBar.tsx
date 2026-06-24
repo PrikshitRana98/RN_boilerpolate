@@ -1,5 +1,5 @@
 //import liraries
-import ModalComp from '@/components/ModalComp';
+import { BottomTabBarProps } from '@react-navigation/bottom-tabs';
 import TextComp from '@/components/TextComp';
 import { useTheme } from '@/context/ThemeContext';
 import useIsRTL from '@/hooks/useIsRTL';
@@ -10,7 +10,7 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
 
 // create a component
-const MyTabBar = ({ state, descriptors, navigation }) => {
+const MyTabBar = ({ state, descriptors, navigation }: BottomTabBarProps) => {
     const isRTL = useIsRTL();
     const { theme } = useTheme();
     const styles = useRTLStyles(isRTL, theme);
@@ -36,6 +36,8 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
                 const icon = options.tabBarIcon
                     ? options.tabBarIcon({
                         focused: isFocused,
+                        color: isFocused ? commonColors.primary : colors.inputPlaceholder,
+                        size: moderateScale(20),
                     })
                     : null;
                 return (
@@ -44,7 +46,7 @@ const MyTabBar = ({ state, descriptors, navigation }) => {
                         accessibilityRole="button"
                         accessibilityState={isFocused ? { selected: true } : {}}
                         accessibilityLabel={options.tabBarAccessibilityLabel}
-                        testID={options.tabBarTestID}
+                        testID={options.tabBarButtonTestID}
                         onPress={onPress}
                         onLongPress={onLongPress}
                         style={styles.subContainer}
@@ -89,7 +91,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
             alignItems: 'center',
             justifyContent: 'center',
         },
-    }), [isRTL, theme]);
+    }), [isRTL, colors.background]);
 };
 
 //make this component available to the app

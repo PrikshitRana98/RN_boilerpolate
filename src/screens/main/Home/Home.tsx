@@ -42,13 +42,9 @@ const Home = () => {
         fetchData(1);
     };
 
-    const onPressCard = () => {
-        // Add card press animation or navigation here
-    };
-
     const renderCharacterCard = useCallback(({ item, index }: { item: Character; index: number }) => {
-        return <CharacterCard item={item} index={index} onPress={onPressCard} />;
-    }, [onPressCard]);
+        return <CharacterCard item={item} index={index} onPress={() => {}} />;
+    }, []);
 
     if (loading) {
         return (

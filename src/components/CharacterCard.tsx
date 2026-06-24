@@ -4,7 +4,7 @@ import Animated, { FadeInDown, FadeOut } from 'react-native-reanimated';
 import TextComp from './TextComp';
 import { useTheme } from '@/context/ThemeContext';
 import useIsRTL from '@/hooks/useIsRTL';
-import { Colors, commonColors, ThemeType } from '@/styles/colors';
+import { Colors, commonColors } from '@/styles/colors';
 import fontFamily from '@/styles/fontFamily';
 import { moderateScale } from '@/styles/scaling';
 
@@ -39,7 +39,7 @@ const CharacterCard = ({ item, index, onPress }: CharacterCardProps) => {
     const isRTL = useIsRTL();
     const { theme } = useTheme();
     const colors = Colors[theme];
-    const styles = useRTLStyles(isRTL, theme);
+    const styles = useRTLStyles(isRTL);
 
     const getStatusColor = useCallback((status: string) => {
         switch (status.toLowerCase()) {
@@ -101,9 +101,7 @@ const CharacterCard = ({ item, index, onPress }: CharacterCardProps) => {
     );
 };
 
-const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
-    const colors = Colors[theme];
-
+const useRTLStyles = (isRTL: boolean) => {
     return useMemo(() => StyleSheet.create({
         card: {
             width: CARD_WIDTH,
@@ -189,7 +187,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
             color: '#000', // Will be overridden at runtime
             marginStart: moderateScale(4),
         },
-    }), [isRTL, theme, colors]);
+    }), [isRTL]);
 };
 
 export default CharacterCard; 

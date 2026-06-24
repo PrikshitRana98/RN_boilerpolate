@@ -114,7 +114,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
           paddingHorizontal: 0,
         },
       }),
-    [isRTL, theme, colors],
+    [isRTL, colors],
   );
 };
 

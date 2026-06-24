@@ -1,7 +1,7 @@
 import { useTheme } from '@/context/ThemeContext';
 import { Colors } from '@/styles/colors';
 import React from 'react';
-import { StatusBar, StyleSheet, View, ViewStyle } from 'react-native';
+import { StatusBar, StyleSheet, ViewStyle } from 'react-native';
 import { SafeAreaView, SafeAreaViewProps } from 'react-native-safe-area-context';
 
 interface WrapperContainerProps extends SafeAreaViewProps {

@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 import { useMemo } from 'react';
 
 const useRTLStyles = (isRTL: boolean, theme?: ThemeType) => {
-    const colors = Colors[theme];
+    const colors = Colors[theme ?? 'light'];
 
     return useMemo(() => StyleSheet.create({
         container: {
@@ -70,7 +70,7 @@ const useRTLStyles = (isRTL: boolean, theme?: ThemeType) => {
         header:{
             marginBottom: verticalScale(16)
         }
-    }), [isRTL, theme, colors]); // Dependencies array includes all variables used in the styles
+    }), [isRTL, colors]); // Dependencies array includes all variables used in the styles
 };
 
 export default useRTLStyles;

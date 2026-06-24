@@ -60,7 +60,7 @@ export const MainStack = () => {
         ),
       }} />
       <Tab.Screen name="Settings" component={Settings} options={{
-        tabBarIcon: ({ color }) => (
+        tabBarIcon: () => (
           <SettingsIcon fill={colors.text} width={20} height={20} />
         )
       }} />

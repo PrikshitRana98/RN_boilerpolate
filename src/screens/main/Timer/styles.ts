@@ -57,7 +57,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
           lineHeight: moderateScale(18),
         },
       }),
-    [isRTL, theme, colors],
+    [colors],
   );
 };
 

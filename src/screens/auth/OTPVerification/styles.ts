@@ -68,7 +68,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
             textAlign: 'center',
             marginVertical: moderateScale(12),
         },
-    }), [isRTL, theme, colors]); // Dependencies array includes all variables used in the styles
+    }), [colors]); // Dependencies array includes all variables used in the styles
 };
 
 export default useRTLStyles; 

@@ -1,4 +1,4 @@
-import { Colors, commonColors, ThemeType } from '@/styles/colors';
+import { Colors, ThemeType } from '@/styles/colors';
 import fontFamily from '@/styles/fontFamily';
 import { moderateScale } from '@/styles/scaling';
 import { StyleSheet, Dimensions } from 'react-native';
@@ -154,7 +154,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
         listHeader:{
             height: moderateScale(10)
         }
-    }), [isRTL, theme, colors]);
+    }), [isRTL, colors]);
 };
 
 export default useRTLStyles;

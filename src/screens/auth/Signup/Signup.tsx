@@ -1,4 +1,4 @@
-import { BackArrowIcon, EyeIcon } from '@/assets/icons';
+import { EyeIcon } from '@/assets/icons';
 import ButtonComp from '@/components/ButtonComp';
 import TextComp from '@/components/TextComp';
 import TextInputComp from '@/components/TextInputComp';

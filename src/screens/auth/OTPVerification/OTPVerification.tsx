@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
 import { View, KeyboardAvoidingView, Platform, TouchableWithoutFeedback, Keyboard } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-
 import ButtonComp from '@/components/ButtonComp';
 import HeaderComp from '@/components/HeaderComp';
 import TextComp from '@/components/TextComp';
 import WrapperContainer from '@/components/WrapperContainer';
 import { useTheme } from '@/context/ThemeContext';
 import useIsRTL from '@/hooks/useIsRTL';
-import { AuthStackParamList } from '@/navigation/types';
 import { OtpInput } from "react-native-otp-entry";
 import useRTLStyles from './styles';
 import { changeFirstTimeState } from '@/redux/actions/auth';
@@ -28,7 +24,6 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({ route }) => {
     const { theme } = useTheme();
     const styles = useRTLStyles(isRTL, theme);
     const [otp, setOtp] = useState('');
-    const navigation = useNavigation<NativeStackNavigationProp<AuthStackParamList>>();
 
     const handleContinue = () => {
         changeFirstTimeState(true);
@@ -92,7 +87,7 @@ const OTPVerification: React.FC<OTPVerificationProps> = ({ route }) => {
                                     title='CONTINUE'
                                     onPress={handleContinue}
                                     style={styles.continueButton}
-                                // disabled={otp.length !== 6}
+                                    disabled={otp.length !== 6}
                                 />
                             </View>
 

@@ -57,7 +57,7 @@ const TextInputComp: React.FC<TextInputCompProps> = ({
                     inputStyle
                 ]}
                 placeholderTextColor={colors.inputPlaceholder}
-                placeholder={t(placeholder)}
+                placeholder={placeholder ? t(placeholder) : undefined}
                 textAlign={isRTL ? 'right' : 'left'}
                 {...props}
             />
@@ -74,7 +74,7 @@ const TextInputComp: React.FC<TextInputCompProps> = ({
 };
 
 const useRTLStyles = (isRTL: boolean, theme?: ThemeType) => {
-    const colors = Colors[theme];
+    const colors = Colors[theme ?? 'light'];
 
     return StyleSheet.create({
         container: {

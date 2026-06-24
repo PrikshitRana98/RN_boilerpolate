@@ -1,6 +1,6 @@
 //import libraries
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import useRTLStyles from './styles';
 import useIsRTL from '@/hooks/useIsRTL';
 import WrapperContainer from '@/components/WrapperContainer';

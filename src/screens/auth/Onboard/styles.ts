@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const useRTLStyles = (isRTL: boolean) => {
+const useRTLStyles = (_isRTL: boolean) => {
     return StyleSheet.create({
         container: {
             flex: 1,

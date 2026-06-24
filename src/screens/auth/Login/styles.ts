@@ -101,7 +101,7 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
         header: {
             paddingHorizontal: 0
         }
-    }), [isRTL, theme, colors]); // Dependencies array includes all variables used in the styles
+    }), [isRTL, colors]); // Dependencies array includes all variables used in the styles
 };
 
 export default useRTLStyles;

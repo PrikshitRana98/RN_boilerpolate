@@ -36,10 +36,9 @@ const TextComp: React.FC<TextCompProps> = ({
         );
     }
 
-    // If no text, just render the children directly
     return (
         <Text style={[styles.text, { color: colors.text }, style]} {...props}>
-            {text}
+            {children ?? text}
         </Text>
     );
 };

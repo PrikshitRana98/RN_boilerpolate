@@ -1,7 +1,7 @@
 import { secureStorage } from "@/utils/secureStorage";
 import { LanguageInterface, saveDefaultLanguage, saveDefaultTheme } from "../reducers/settings";
 import store from "../store";
-import { Language, ThemeMode } from "@/typings/global";
+import { ThemeMode } from "@/typings/global";
 import i18next from "i18next";
 
 const { dispatch } = store;
