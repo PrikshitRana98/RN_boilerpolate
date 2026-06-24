@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "downloadIosUrl": "https://your-server.com/ota/ios-bundle.zip",
+  "downloadAndroidUrl": "https://your-server.com/ota/android-bundle.zip",
+  "releaseNotes": "Initial OTA release"
+}

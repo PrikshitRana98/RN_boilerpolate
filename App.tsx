@@ -25,6 +25,7 @@ import { getLocalItem } from "@/utils/checkStorage";
 import BootSplash from "react-native-bootsplash";
 import { requestUserPermission, setupNotificationDeepLinks } from "@/helper/notifciationService";
 import { startOfflineSyncListener } from "@/helper/offlineSyncService";
+import { checkForOtaUpdate } from "@/helper/otaUpdateService";
 
 /**
  * Main application component that serves as the entry point for the app.
@@ -74,6 +75,14 @@ const App = () => {
   useLayoutEffect(() => {
     return startOfflineSyncListener();
   }, []);
+
+  useLayoutEffect(() => {
+    if (!isAppReady) {
+      return;
+    }
+
+    checkForOtaUpdate();
+  }, [isAppReady]);
 
 
   /**
