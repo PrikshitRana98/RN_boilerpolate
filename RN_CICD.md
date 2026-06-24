@@ -139,4 +139,21 @@ npm run typecheck
 npm test
 npm run bundle:ota:android
 npm run bundle:ota:ios
+
 ```
+
+
+
+* Git workflow : for large team 
+    branch:
+    main (hotfixes)
+    staging
+    feature
+
+* Trunk base development: small team
+    branch:
+    main (hotfixes)
+    features
+
+* fork development: for contibution or cointract based
+    - private repo

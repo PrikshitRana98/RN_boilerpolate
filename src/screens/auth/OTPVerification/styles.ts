@@ -13,6 +13,9 @@ const useRTLStyles = (isRTL: boolean, theme: ThemeType) => {
             flex: 1,
             backgroundColor: colors.background,
         },
+        keyboardAvoidingView: {
+            flex: 1,
+        },
         content: {
             flex: 1,
             paddingHorizontal: moderateScale(16),
