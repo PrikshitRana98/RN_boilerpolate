@@ -6,7 +6,7 @@ import useIsRTL from '@/hooks/useIsRTL';
 import actions from '@/redux/actions';
 import { commonColors } from '@/styles/colors';
 import React, { useCallback, useEffect, useState } from 'react';
-import { ActivityIndicator, FlatList, RefreshControl, View } from 'react-native';
+import { ActivityIndicator, FlatList, RefreshControl, Text, View } from 'react-native';
 import { ApiResponse } from './home.types';
 import useRTLStyles from './styles';
 
@@ -57,6 +57,7 @@ const Home = () => {
     return (
         <WrapperContainer style={styles.container} edges={['top']}>
             <HeaderComp showBack={false} title='CHARACTERS' />
+            <Text style={{color :"red"}}>CHARACTERS</Text>
             <FlatList
                 data={characters}
                 renderItem={renderCharacterCard}
