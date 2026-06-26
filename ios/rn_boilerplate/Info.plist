@@ -33,16 +33,10 @@
 			</array>
 		</dict>
 	</array>
-  
-  <key>GOOGLE_MAP_KEY</key>
-  <string>$(GOOGLE_MAP_KEY)</string>
-  
-  <key>OTHER_KEY</key>
-  <string>$(OTHER_KEY)</string>
-  
-  
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>GOOGLE_MAP_KEY</key>
+	<string>$(GOOGLE_MAP_KEY)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -52,8 +46,14 @@
 		<key>NSAllowsLocalNetworking</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs camera access for video calls</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app needs microphone access for voice calls</string>
+	<key>OTHER_KEY</key>
+	<string>$(OTHER_KEY)</string>
 	<key>RCTNewArchEnabled</key>
 	<true/>
 	<key>UIAppFonts</key>
@@ -62,6 +62,10 @@
 		<string>Inter-Medium.ttf</string>
 		<string>Inter-Regular.ttf</string>
 		<string>Inter-SemiBold.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>voip</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>BootSplash</string>

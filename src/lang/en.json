@@ -72,5 +72,18 @@
     "OFFLINE_POST_SUBMITTING": "Submitting...",
     "OFFLINE_POST_SENT": "Data sent successfully",
     "OFFLINE_POST_QUEUED": "Saved offline. Will sync when online",
-    "OFFLINE_POST_FAILED": "Failed to submit. Try again"
+    "OFFLINE_POST_FAILED": "Failed to submit. Try again",
+    "Voice": "Voice",
+    "VAPI_VOICE": "Voice Assistant",
+    "VAPI_START_CALL": "Start Call",
+    "VAPI_END_CALL": "End Call",
+    "VAPI_MUTE": "Mute",
+    "VAPI_UNMUTE": "Unmute",
+    "VAPI_IDLE": "Ready to talk",
+    "VAPI_CONNECTING": "Connecting...",
+    "VAPI_LISTENING": "Listening",
+    "VAPI_SPEAKING": "Assistant speaking",
+    "VAPI_TRANSCRIPT": "Conversation",
+    "VAPI_TRANSCRIPT_EMPTY": "Start a call to see the conversation transcript",
+    "VAPI_HINT": "Talk naturally with the AI assistant. Calls use your microphone."
 }

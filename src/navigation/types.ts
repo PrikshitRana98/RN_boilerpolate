@@ -17,6 +17,7 @@ export type AuthStackParamList = {
 export type MainStackParamList = {
   Home: undefined;
   Timer: undefined;
+  Voice: undefined;
   Profile: undefined;
   Settings: undefined;
 }; 

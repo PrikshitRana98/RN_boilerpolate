@@ -72,5 +72,18 @@
     "OFFLINE_POST_SUBMITTING": "جارٍ الإرسال...",
     "OFFLINE_POST_SENT": "تم إرسال البيانات بنجاح",
     "OFFLINE_POST_QUEUED": "تم الحفظ دون اتصال. سيتم المزامنة عند الاتصال",
-    "OFFLINE_POST_FAILED": "فشل الإرسال. حاول مرة أخرى"
+    "OFFLINE_POST_FAILED": "فشل الإرسال. حاول مرة أخرى",
+    "Voice": "الصوت",
+    "VAPI_VOICE": "المساعد الصوتي",
+    "VAPI_START_CALL": "بدء المكالمة",
+    "VAPI_END_CALL": "إنهاء المكالمة",
+    "VAPI_MUTE": "كتم الصوت",
+    "VAPI_UNMUTE": "إلغاء كتم الصوت",
+    "VAPI_IDLE": "جاهز للتحدث",
+    "VAPI_CONNECTING": "جارٍ الاتصال...",
+    "VAPI_LISTENING": "يستمع",
+    "VAPI_SPEAKING": "المساعد يتحدث",
+    "VAPI_TRANSCRIPT": "المحادثة",
+    "VAPI_TRANSCRIPT_EMPTY": "ابدأ مكالمة لعرض نص المحادثة",
+    "VAPI_HINT": "تحدث بشكل طبيعي مع المساعد الذكي. تستخدم المكالمات الميكروفون."
 }

@@ -4,6 +4,7 @@ import {
   Profile,
   Settings,
   Timer,
+  VoiceAssistant,
 } from '@/screens';
 import { Colors } from '@/styles/colors';
 import fontFamily from '@/styles/fontFamily';
@@ -49,6 +50,12 @@ export const MainStack = () => {
           ),
         }} />
       <Tab.Screen name="Timer" component={Timer}
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            focused ? <HomeIcon color={color} /> : <HomeInactiveIcon color={color} />
+          ),
+        }} />
+      <Tab.Screen name="Voice" component={VoiceAssistant}
         options={{
           tabBarIcon: ({ color, focused }) => (
             focused ? <HomeIcon color={color} /> : <HomeInactiveIcon color={color} />
